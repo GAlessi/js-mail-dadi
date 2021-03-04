@@ -66,16 +66,21 @@
             var stamp = document.getElementById("stamp1");
             var emailValide = ["aaa@gmail.com", "bbb@gmail.com", "ccc@gmail.com"]
             var emailUtente = prompt("Inserisci la tua Email")
+            var flag = 0;
 
             for (var i = 0; i < emailValide.length; i++) {
-                if(emailUtente !== emailValide[i]){
-                    var validità = "Non hai le autorizzazioni necessarie"
-                    console.log(validità);
-                }else
-                    var validità = "Email valida"
-                    console.log(validità);
+                if(emailUtente === emailValide[i]){
+                    flag = 1;
+                }
+            }
+
+            if(flag == 1){
+                var validità = "Email valida"
+            }else {
+                var validità = "Non hai le autorizzazioni necessarie"
             }
             
+            console.log(validità);
             stamp.innerHTML = (validità)
 
 
