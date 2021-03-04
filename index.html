@@ -45,16 +45,14 @@
             for (var i = 0; i < emailValide.length; i++) {
                 var elem = emailValide[i]
                 if(elem === emailUtente){
-                    console.log("Email valida");
                     var validità = "Email valida"
                     i = emailValide.length;
 
                 }else if (i == emailValide.length - 1){
-                    console.log("Non hai le autorizzazioni necessarie");
                     var validità = "Non hai le autorizzazioni necessarie"
                 }
             }
-
+            console.log(validità);
             stamp.innerHTML = (validità)
 
 
