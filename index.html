@@ -27,7 +27,10 @@
     </head>
     <body>
         <div class="container">
-            <h1 id="stamp"></h1>
+            <div class="flexItem">
+                <h1 id="stamp1"></h1>
+                <h1 id="stamp2"></h1>
+            </div>
         </div>
 
 
@@ -35,6 +38,7 @@
 
 // Verificatore di Email
 
+            var stamp = document.getElementById("stamp1");
             var emailValide = ["aaa@gmail.com", "bbb@gmail.com", "ccc@gmail.com"]
             var emailUtente = prompt("Inserisci la tua Email")
 
@@ -42,12 +46,38 @@
                 var elem = emailValide[i]
                 if(elem === emailUtente){
                     console.log("Email valida");
+                    var validità = "Email valida"
+
                     i = emailValide.length;
                 }else if (i == emailValide.length - 1){
                     console.log("Non hai le autorizzazioni necessarie");
+                    var validità = "Non hai le autorizzazioni necessarie"
+
                 }
             }
 
+            stamp.innerHTML = (validità)
+
+
+
+// Lancio di dadi
+
+            var stamp = document.getElementById("stamp2");
+            var min = 1;
+            var max = 6;
+            var risultatoPlayer = Math.floor(Math.random() * max) + min;
+            var risultatoComputer = Math.floor(Math.random() * max) + min;
+            var vincitore = "Nessuno";
+            console.log(risultatoPlayer, risultatoComputer);
+
+            if(risultatoPlayer > risultatoComputer){
+                vincitore = "Player";
+            }else if (risultatoPlayer < risultatoComputer) {
+                vincitore = "Computer";
+            }
+
+            console.log(vincitore)
+            stamp.innerHTML = ("Il vincitore è: " + vincitore);
 
         </script>
     </body>
