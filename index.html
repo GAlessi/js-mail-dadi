@@ -42,23 +42,41 @@
 
 // Verificatore di Email
 
+            // var stamp = document.getElementById("stamp1");
+            // var emailValide = ["aaa@gmail.com", "bbb@gmail.com", "ccc@gmail.com"]
+            // var emailUtente = prompt("Inserisci la tua Email")
+            //
+            // for (var i = 0; i < emailValide.length; i++) {
+            //     var elem = emailValide[i]
+            //     if(elem === emailUtente){
+            //         var validità = "Email valida"
+            //         i = emailValide.length;
+            //
+            //     }else if (i == emailValide.length - 1){
+            //         var validità = "Non hai le autorizzazioni necessarie"
+            //     }
+            // }
+            // console.log(validità);
+            // stamp.innerHTML = (validità)
+
+
+
+// Verificatore di Email 2
+
             var stamp = document.getElementById("stamp1");
             var emailValide = ["aaa@gmail.com", "bbb@gmail.com", "ccc@gmail.com"]
             var emailUtente = prompt("Inserisci la tua Email")
 
             for (var i = 0; i < emailValide.length; i++) {
-                var elem = emailValide[i]
-                if(elem === emailUtente){
-                    var validità = "Email valida"
-                    i = emailValide.length;
-
-                }else if (i == emailValide.length - 1){
+                if(emailUtente !== emailValide[i]){
                     var validità = "Non hai le autorizzazioni necessarie"
-                }
+                    console.log(validità);
+                }else
+                    var validità = "Email valida"
+                    console.log(validità);
             }
-            console.log(validità);
+            
             stamp.innerHTML = (validità)
-
 
 
 // Lancio di dadi
